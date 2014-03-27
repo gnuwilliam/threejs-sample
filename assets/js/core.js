@@ -83,4 +83,17 @@ camera.lookAt(scene.position);
 // ============================
 
 document.body.appendChild(renderer.domElement);
-renderer.render(scene, camera);
+
+var render = function () {
+    requestAnimationFrame(render);
+
+    sphere.rotation.x += 0.05;
+    sphere.rotation.y += 0.03;
+
+    cube.rotation.x += 0.05;
+    cube.rotation.y += 0.03;
+
+    renderer.render(scene, camera);
+};
+
+render();
