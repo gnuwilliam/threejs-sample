@@ -88,9 +88,9 @@ camera.position.y = 40;
 camera.position.z = 30;
 camera.lookAt(scene.position);
 
-// ============================
-// Render the scene
-// ============================
+// ================
+// Define the stats
+// ================
 
 function initStats () {
    var stats = new Stats();
@@ -104,6 +104,10 @@ function initStats () {
 };
 
 var stats = initStats();
+
+// ================
+// Render the scene
+// ================
 
 var render = function () {
     stats.update();
