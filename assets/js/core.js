@@ -115,8 +115,8 @@ var render = function () {
 
     requestAnimationFrame(render);
 
-    step += 0.04;
-    sphere.position.x = 20+ ( 10 * ( Math.cos(step) ) );
+    step += 0.05;
+    
     sphere.position.y = 2 + ( 10 * Math.abs( Math.sin(step) ) );
 
     cube.rotation.x += 0.02;
