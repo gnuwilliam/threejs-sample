@@ -109,16 +109,19 @@ var stats = initStats();
 // Render the scene
 // ================
 
+var step = 0;
 var render = function () {
     stats.update();
 
     requestAnimationFrame(render);
 
-    sphere.rotation.x += 0.05;
-    sphere.rotation.y += 0.03;
+    step += 0.04;
+    sphere.position.x = 20+ ( 10 * ( Math.cos(step) ) );
+    sphere.position.y = 2 + ( 10 * Math.abs( Math.sin(step) ) );
 
-    cube.rotation.x += 0.05;
-    cube.rotation.y += 0.03;
+    cube.rotation.x += 0.02;
+    cube.rotation.y += 0.02;
+    cube.rotation.z += 0.02;
 
     renderer.render(scene, camera);
 };
