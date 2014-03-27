@@ -101,7 +101,7 @@ function initStats () {
    document.getElementById('stats').appendChild( stats.domElement );
 
    return stats;
-};
+}
 
 var stats = initStats();
 
@@ -112,8 +112,7 @@ var stats = initStats();
 var controls = new function() {
     this.rotationSpeed = 0.02;
     this.bouncingSpeed = 0.03;
-}
-
+};
 
 var gui = new dat.GUI();
 gui.add(controls, 'rotationSpeed', 0, 0.5);
